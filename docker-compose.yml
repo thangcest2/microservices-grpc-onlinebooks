@@ -1,0 +1,30 @@
+version: "3.8"
+services:
+    marketplace:
+        build:
+            context: .
+            dockerfile: marketplace/Dockerfile
+        environment:
+            RECOMMENDATIONS_HOST: recommendations
+        image: marketplace
+        networks:
+            - microservices
+        ports:
+            - 5000:5000
+#        command: "FLASK_APP=marketplace.py flask run --host=0.0.0.0"
+        volumes:
+            - ./marketplace:/service/marketplace
+
+    recommendations:
+        build:
+            context: .
+            dockerfile: recommendations/Dockerfile
+        image: recommendations
+        networks:
+            - microservices
+#        command: "python recommendations.py"
+        volumes:
+            - ./recommendations:/service/recommendations
+
+networks:
+    microservices:
