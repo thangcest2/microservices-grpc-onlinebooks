@@ -10,8 +10,7 @@ services:
         networks:
             - microservices
         ports:
-            - 5000:5000
-#        command: "FLASK_APP=marketplace.py flask run --host=0.0.0.0"
+            - 5001:5000
         volumes:
             - ./marketplace:/service/marketplace
 
@@ -22,7 +21,6 @@ services:
         image: recommendations
         networks:
             - microservices
-#        command: "python recommendations.py"
         volumes:
             - ./recommendations:/service/recommendations
 

@@ -12,5 +12,3 @@ RUN python -m grpc_tools.protoc -I ../protobufs --python_out=. --grpc_python_out
 
 EXPOSE 50051
 ENTRYPOINT [ "python", "recommendations.py" ]
-#ENTRYPOINT ["tail", "-f", "/dev/null"]
-
