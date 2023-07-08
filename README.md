@@ -22,12 +22,12 @@ python -m grpc_tools.protoc -I ../protobufs --python_out=. --grpc_python_out=. .
   - marketplace/Dockerfile -> marketplace/marketplace.py start a Web Server, serve a route in which this route make call to Protobuf Server
   - Browser localhost:5001 -> make call to the Web Server 
 
-# Run it:
+### Run it:
 - By local docker & web: `docker-compose up` => `localhost:5001`
 - By local docker & command line: `docker-compose up` => `docker-compose exec recommendations python demo_client.py`
 - By kubernetes with Docker Desktop cluster: `kubectl apply -f kubernetes.yml` => `localhost:4000`
 
-# Push images to docker hub:
+### Push images to docker hub:
 - After the `docker-compose up`. Local docker image will be created. Then we push to our own dockerhub for the kubernetes.yml to use
 ```commandline
 docker login
