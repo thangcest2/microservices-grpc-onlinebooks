@@ -40,6 +40,11 @@ docker image push thangcest2/onlinebooks_marketplace:latest
 ### Original tutorial:
 https://realpython.com/python-microservices-grpc/#production-ready-python-microservices
 
+### Diagram
+<picture>
+  <img alt="GRPC Diagram" src="https://i.ibb.co/rZgnYpC/grpc-drawio.png">
+</picture>
+
 ### Youtube Video: TBD
 
 # License:
